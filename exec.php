@@ -3,7 +3,7 @@
   $EndWord   = $_POST['end_word'];
   
   echo $startWord;
-  echo $EndWord
+  echo $EndWord;
   
   $botId1 = 1;
   $botId2 = 2;
