@@ -10,6 +10,7 @@
   
   // ゲームスタート
   $startUrl = "http://vachat4relay.herokuapp.com/start?bot_id1=".$botId1."&bot_id2=".$botId2."&start=".$startWord."&goal=".$endWord;
+/*
 　$jsonString = file_get_contents($startUrl);
   $aryResult = json_decode($jsonString);
   
@@ -27,5 +28,5 @@
   }
   echo $retunUrl;
   //header("Location: $retunUrl");
-  
+  */
 ?>
