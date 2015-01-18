@@ -12,7 +12,7 @@
   $startUrl = "http://vachat4relay.herokuapp.com/start?bot_id1=".$botId1."&bot_id2=".$botId2."&start=".$startWord."&goal=".$endWord;
 echo $startUrl;
 
-　$jsonString = file_get_contents($startUrl);
+　$jsonString = file_get_contents("$startUrl");
   $aryResult = json_decode($jsonString);
   
   var_dump($aryResult);
