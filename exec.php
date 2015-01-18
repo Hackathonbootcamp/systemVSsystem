@@ -16,7 +16,7 @@ echo $startUrl;
   $aryResult = json_decode($jsonString);
   
   var_dump($aryResult);
-
+/*
   if (is_array($aryResult)) {
    $gameId = $aryResult['game_id'];
    $run    = $aryResult['run?'];
@@ -29,5 +29,5 @@ echo $startUrl;
   }
   echo $retunUrl;
   //header("Location: $retunUrl");
-  
+ */ 
 ?>
