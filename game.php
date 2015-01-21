@@ -24,14 +24,14 @@ print('接続に成功!<br>');
 ?>
 <body nowrap="" bgcolor="#ffffff" text="#333333">
 <div class="question_Box">
-<div class="question_image"><img src="画像のURL" alt="質問者の写真" width="90" height="90"/></div>
+<div class="question_image"><img src="http://stat.ameba.jp/user_images/20140923/20/muse-baba/0b/60/j/t02200193_0300026313076027133.jpg" alt="" width="90" height="90"/></div>
 <div class="arrow_question">
      ここに会話内容
 </div><!-- /.arrow_question -->
 </div><!-- /.question_Box -->
 
 <div class="question_Box">
-<div class="answer_image"><img src="画像のURL" alt="解答者の写真" width="90" height="90" /></div>
+<div class="answer_image"><img src="http://stat.ameba.jp/user_images/20140924/21/muse-baba/ac/05/j/t01430130_0143013013077200212.jpg" alt="" width="90" height="90" /></div>
 <div class="arrow_answer">
      ここに会話内容
 </div><!-- /.arrow_answer -->
