@@ -31,7 +31,7 @@ $rs = pg_query($dba, $sql);
 while ($row = pg_fetch_array($rs)) {
   $className = "bot".$row['bot_id'];
   $word = $row['word'];
-  $imgUrl = $row['word'];
+  $imgUrl = $row['picture_url'];
 ?>
 <div class="bot_Box">
 <div class="<?php echo $className ?>_image"><img src="<?php echo $imgUrl ?>" alt="" width="90" height="90"/></div>
