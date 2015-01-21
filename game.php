@@ -26,7 +26,7 @@ if (!$dba) {
     die('接続失敗(ToT)'.pg_last_error());
 }
 
-$sql = "select id, word picture_url from chat_log where game_id = " . $gameId . " order by ins_time desc";
+$sql = "select id, word, picture_url from chat_log where game_id = '" . $gameId . "' order by ins_time desc";
 $rs = pg_query($dba, $sql);
 while ($row = pg_fetch_array($rs)) {
   $className = "bot".$row['bot_id'];
