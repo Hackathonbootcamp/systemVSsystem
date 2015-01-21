@@ -9,7 +9,7 @@ $botId2 = 2;
 // ゲームスタート
 $startUrl = "http://vachat4relay.herokuapp.com/start?bot_id1=".$botId1."&bot_id2=".$botId2."&start=".$startWord."&goal=".$endWord;
 $jsonString = file_get_contents($startUrl);
-$aryResult = json_decode($jsonString);
+$aryResult = json_decode($jsonString, true);
 var_dump($aryResult);
 
 if (is_array($aryResult)) {
