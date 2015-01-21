@@ -34,9 +34,9 @@ while ($row = pg_fetch_array($rs)) {
   $imgUrl = $row['word'];
 ?>
 <div class="bot_Box">
-<div class="question_image"><img src="http://stat.ameba.jp/user_images/20140923/20/muse-baba/0b/60/j/t02200193_0300026313076027133.jpg" alt="" width="90" height="90"/></div>
-<div class="arrow_question">
-     {?php echo $word ?}
+<div class="<?php echo $className ?>_image"><img src="<?php echo $imgUrl ?>" alt="" width="90" height="90"/></div>
+<div class="arrow_<?php echo $className ?>">
+     <?php echo $word ?>
 </div><!-- /.arrow_question -->
 </div><!-- /.question_Box -->
 <?php } ?>
