@@ -16,15 +16,15 @@ if (is_array($aryResult)) {
   $gameId = $aryResult['game_id'];
   $run    = $aryResult['run?'];
 }
-echo "game:".$game."<br />";
-echo "run:".$run."<br />";
+//echo "game:".$game."<br />";
+//echo "run:".$run."<br />";
 
 if ($run) {
   $retunUrl = "game.php?game_id=".$gameId;
 } else {
   $retunUrl = "game_error.php";
 }
-echo $retunUrl;
-//header("Location: $retunUrl");
+//echo $retunUrl;
+header("Location: $retunUrl");
   
 ?>
