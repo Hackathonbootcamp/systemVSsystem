@@ -3,7 +3,7 @@
 /*============================================================
 フキダシデザイン 
 ============================================================*/
-.arrow_answer{
+.arrow_bot2{
     position: relative;
     background: #FFE4E1;
     border: 1px solid #B22222;
@@ -12,7 +12,7 @@
     width: 70%;
     font-size: 13px;
 }
-.arrow_question {
+.arrow_bot1 {
     position: relative;
     background: #AFEEEE;
     border: 1px solid #5F9EA0;
@@ -21,14 +21,14 @@
     width: 70%;
     font-size: 13px;
 }
-.arrow_question {
+.arrow_bot1 {
     float: right;
     margin-right: 20px;
 }
-.arrow_answer:after,
-.arrow_answer:before,
-.arrow_question:after,
-.arrow_question:before {
+.arrow_bot2:after,
+.arrow_bot2:before,
+.arrow_bot1:after,
+.arrow_bot1:before {
     top: 50%;
     border: solid transparent;
     content: " ";
@@ -37,34 +37,34 @@
     position: absolute;
     pointer-events: none;
 }
-.arrow_question:after,
-.arrow_question:before { right: 100% }
-.arrow_answer:after,
-.arrow_answer:before { left: 100% }
-.arrow_answer:after,
-.arrow_question:after {
+.arrow_bot1:after,
+.arrow_bot1:before { right: 100% }
+.arrow_bot2:after,
+.arrow_bot2:before { left: 100% }
+.arrow_bot2:after,
+.arrow_bot1:after {
     border-color: rgba(255, 255, 255, 0);
     border-width: 15px;
     margin-top: -15px;
 }
-.arrow_answer:after { border-left-color: #FFE4E1; }
-.arrow_question:after { border-right-color: #AFEEEE; }
-.arrow_answer:before,
-.arrow_question:before {
+.arrow_bot2:after { border-left-color: #FFE4E1; }
+.arrow_bot1:after { border-right-color: #AFEEEE; }
+.arrow_bot2:before,
+.arrow_bot1:before {
     border-color: rgba(200, 200, 200, 0);
     border-width: 16px;
     margin-top: -16px;
 }
-.arrow_answer:before { border-left-color: #B22222 }
-.arrow_question:before { border-right-color: #5F9EA0; }
-.question_image { float: left }
-.answer_image {
+.arrow_bot2:before { border-left-color: #B22222 }
+.arrow_bot1:before { border-right-color: #5F9EA0; }
+.bot1_image { float: left }
+.bot2_image {
     float: right;
     margin-right: 20px;
 }
-.answer_image img,
-.question_image img { border-radius: 50px }
-.question_Box {
+.bot2_image img,
+.bot1_image img { border-radius: 50px }
+.bot_Box {
     margin-bottom: 25px;
     overflow: hidden;
 }
