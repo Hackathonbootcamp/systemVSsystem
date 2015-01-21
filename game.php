@@ -8,6 +8,7 @@
 <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
 
 </head>
+<body nowrap="" bgcolor="#ffffff" text="#333333">
 
 <?php
 
@@ -27,9 +28,6 @@ if (!$dba) {
 
 $sql = "select id, word picture_url from chat_log where game_id = " . $gameId . " order by ins_time desc";
 $rs = pg_query($dba, $sql);
-?>
-<body nowrap="" bgcolor="#ffffff" text="#333333">
-<?php
 while ($row = pg_fetch_array($rs)) {
   $className = "bot".$row['bot_id'];
   $word = $row['word'];
@@ -38,25 +36,10 @@ while ($row = pg_fetch_array($rs)) {
 <div class="bot_Box">
 <div class="question_image"><img src="http://stat.ameba.jp/user_images/20140923/20/muse-baba/0b/60/j/t02200193_0300026313076027133.jpg" alt="" width="90" height="90"/></div>
 <div class="arrow_question">
-     ここに会話内容
+     {?php echo $word ?}
 </div><!-- /.arrow_question -->
 </div><!-- /.question_Box -->
 <?php } ?>
 
-<!--
-<div class="bot_Box">
-<div class="question_image"><img src="http://stat.ameba.jp/user_images/20140923/20/muse-baba/0b/60/j/t02200193_0300026313076027133.jpg" alt="" width="90" height="90"/></div>
-<div class="arrow_question">
-     ここに会話内容
-</div><!-- /.arrow_question -->
-</div><!-- /.question_Box -->
-
-<div class="question_Box">
-<div class="answer_image"><img src="http://stat.ameba.jp/user_images/20140924/21/muse-baba/ac/05/j/t01430130_0143013013077200212.jpg" alt="" width="90" height="90" /></div>
-<div class="arrow_answer">
-     ここに会話内容
-</div><!-- /.arrow_answer -->
-</div><!-- /.question_Box -->
--->
 </body>
 </html>
