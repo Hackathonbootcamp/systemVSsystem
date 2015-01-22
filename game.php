@@ -26,7 +26,6 @@ $user = "ollzkkdgygzkti";
 $pass = "3fdgK_t5FBW2n4-yGs5_D6Xh8f";
 
 $gameId = $_GET['game_id'];
-echo $gameId."<br />";
 
 $dba = pg_connect("host=$host dbname=$dbname user=$user password=$pass");
 
@@ -56,6 +55,11 @@ while ($row = pg_fetch_array($rs)) {
   $imgUrl = $aryBot['picture_url'];
   $botName = $aryBot['bot_name'];
 ?>
+<form method="post" action="">
+<div id="search">
+<input type="text" name="kainyu" value="" onclick="value=''"><input type="submit" value="click!" id="submit">
+</div>
+</form>
 <div id="ress_area">
 <div class="bot_Box">
 <div class="<?php echo $className ?>_image"><img src="<?=$imgUrl ?>" alt="<?=$botName?>" width="90" height="90"/></div>
