@@ -11,7 +11,7 @@
 <!--
 //タイマーをセット
 function tm(){
-  tm = setInterval("location.reload()",5000);
+  tm = setInterval("location.reload()",10000);
 }
 // -->
 </script>
@@ -46,7 +46,6 @@ foreach($aryBot as $val) {
 	$aryBotList[$botid] = array();
   $aryBotList[$botid] = $tmpBot;
 }
-var_dump($aryBotList);
 
 $sql = "select bot_id, word, picture_url from chat_log where game_id = '" . $gameId . "' order by ins_time desc";
 $rs = pg_query($dba, $sql);
@@ -59,9 +58,9 @@ while ($row = pg_fetch_array($rs)) {
 ?>
 <div id="ress_area">
 <div class="bot_Box">
-<div class="<?php echo $className ?>_image"><img src="<?php echo $imgUrl ?>" alt="<?=$botName?>" width="90" height="90"/></div>
+<div class="<?php echo $className ?>_image"><img src="<?=$imgUrl ?>" alt="<?=$botName?>" width="90" height="90"/></div>
 <div class="arrow_<?php echo $className ?>">
-     <?php echo $word ?>
+     <?=$word?>
 </div><!-- /.arrow_question -->
 </div><!-- /.question_Box -->
 <?php } ?>
