@@ -51,13 +51,15 @@ var_dump($aryBotList);
 $sql = "select bot_id, word, picture_url from chat_log where game_id = '" . $gameId . "' order by ins_time desc";
 $rs = pg_query($dba, $sql);
 while ($row = pg_fetch_array($rs)) {
+  $aryBot = $aryBotList[$row['bot_id']];
   $className = "bot".$row['bot_id'];
   $word = $row['word'];
-  $imgUrl = $row['picture_url'];
+  $imgUrl = $aryBot['picture_url'];
+  $botName = $aryBot['bot_name'];
 ?>
 <div id="ress_area">
 <div class="bot_Box">
-<div class="<?php echo $className ?>_image"><img src="<?php echo $imgUrl ?>" alt="" width="90" height="90"/></div>
+<div class="<?php echo $className ?>_image"><img src="<?php echo $imgUrl ?>" alt="<?=$botName?>" width="90" height="90"/></div>
 <div class="arrow_<?php echo $className ?>">
      <?php echo $word ?>
 </div><!-- /.arrow_question -->
