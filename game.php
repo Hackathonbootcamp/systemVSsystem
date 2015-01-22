@@ -36,6 +36,8 @@ if (!$dba) {
 
 $json_string = file_get_contents('http://vachat4relay.herokuapp.com/botlist');
 $aryBot = json_decode($json_string, true);
+var_dump($aryBot);
+/*
 $aryBotList = array();
 foreach($aryBot as $val) {
 	$botid = $val['bot_id'];
@@ -47,6 +49,7 @@ foreach($aryBot as $val) {
   $aryBotList[$botid] = $tmpBot;
 }
 var_dump($aryBotList);
+*/
 $sql = "select bot_id, word, picture_url from chat_log where game_id = '" . $gameId . "' order by ins_time desc";
 $rs = pg_query($dba, $sql);
 while ($row = pg_fetch_array($rs)) {
