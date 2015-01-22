@@ -55,9 +55,6 @@ $rs = pg_query($dba, $sql);
 while ($row = pg_fetch_array($rs)) {
   $className = "bot".$row['bot_id'];
   $word = $row['word'];
-  foreach(){
-  	
-  }
   $imgUrl = $row['picture_url'];
 ?>
 <div id="ress_area">
