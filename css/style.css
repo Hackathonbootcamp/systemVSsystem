@@ -68,3 +68,17 @@
     margin-bottom: 25px;
     overflow: hidden;
 }
+
+#search input{
+    border:1px solid #777;
+    border-radius: 5px 0 0 5px;
+    -moz-border-radius: 5px 0 0 5px;
+    -webkit-border-radius: 5px 0 0 5px;
+    text-shadow: 0 1px #fff;
+    -moz-box-shadow: 0 1px 1px #fff;
+    -webkit-box-shadow: 0 1px 1px #fff;
+    box-shadow: 0 1px 1px #fff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#fff));
+    background: -moz-linear-gradient(top, #eee, #fff);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#ffffff');
+}
