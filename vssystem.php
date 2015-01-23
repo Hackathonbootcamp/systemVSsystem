@@ -47,7 +47,7 @@ foreach($aryBot as $val) {
 	  $i++;
 	  $botName = $val['bot_name'];
 	?>
-    <input type="radio" name="bot_id1" id="select1<?=$i?>" value="<?=$key?>" <?php if ($i==1){echo checked}?>>
+    <input type="radio" name="bot_id1" id="select1<?=$i?>" value="<?=$key?>" <?php if ($i==1){echo "checked"}?>>
     <label for="select11"><?=$botName?></label>
     <?php
 	}
@@ -64,7 +64,7 @@ foreach($aryBot as $val) {
 	  $i++;
 	  $botName = $val['bot_name'];
 	?>
-    <input type="radio" name="bot_id2" id="select2<?=$i?>" value="<?=$key?>" <?php if ($i==1){echo checked}?>>
+    <input type="radio" name="bot_id2" id="select2<?=$i?>" value="<?=$key?>" <?php if ($i==1){echo "checked"}?>>
     <label for="select21"><?=$botName?></label>
     <?php
 	}
