@@ -82,3 +82,194 @@
     background: -moz-linear-gradient(top, #eee, #fff);
     filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#ffffff');
 }
+
+.botid1 input{
+    display: none;
+}
+.botid1 label{
+    display: block;
+    float: left;
+    cursor: pointer;
+    width: 80px;
+    margin: 0;
+    padding: 12px 5px;
+    border-right: 1px solid #abb2b7;
+    background: #bdc3c7;
+    color: #555e64;
+    font-size: 14px;
+    text-align: center;
+    line-height: 1;
+    transition: .2s;
+}
+.botid1 label:first-of-type{
+    border-radius: 3px 0 0 3px;
+}
+.botid1 label:last-of-type{
+    border-right: 0px;
+    border-radius: 0 3px 3px 0;
+}
+.botid1 input[type="radio"]:checked + label {
+    background-color: #FF6347;
+    color: #fff;
+}
+
+.botid2 input{
+    display: none;
+}
+.botid2 label{
+    display: block;
+    float: left;
+    cursor: pointer;
+    width: 80px;
+    margin: 0;
+    padding: 12px 5px;
+    border-right: 1px solid #abb2b7;
+    background: #bdc3c7;
+    color: #555e64;
+    font-size: 14px;
+    text-align: center;
+    line-height: 1;
+    transition: .2s;
+}
+.botid2 label:first-of-type{
+    border-radius: 3px 0 0 3px;
+}
+.botid2 label:last-of-type{
+    border-right: 0px;
+    border-radius: 0 3px 3px 0;
+}
+.botid2 input[type="radio"]:checked + label {
+    background-color: #00BFFF;
+    color: #fff;
+}
+
+/*FORM1*/
+
+/*まず、フォーム全体の囲み罫や背景などを指定*/
+form#startform {
+	padding: 10px;
+	margin-bottom: 15px;
+	border: 1px solid #ccc;
+	color: #666;
+	background: #F0F8F1;
+	/*↓背景グラデーションの指定*/
+	background: -moz-linear-gradient(top, #FBFCFC, #F0F8F1);
+	background: -webkit-linear-gradient(top, #FBFCFC, #F0F8F1);
+	background: linear-gradient(#FBFCFC, #F0F8F1);
+}
+
+/*リスト要素<ul>を初期化*/
+form#startform ul {
+	padding:0;
+	margin:0
+}
+/*<li>も初期化し、ボーダーなどを指定*/
+form#startform ul li {
+	list-style:none;
+	margin:0px;
+	padding:10px;
+	border-top: 2px solid #FFF;
+	font-size: 12px;
+}
+/*最初の<li>にはボーダーをつけない（:first-child疑似クラスによる指定）*/
+form#startform ul li:first-child {
+	border-top:none;}
+
+
+/* span要素をブロック化しフロートでフォーム部品と横に並べる*/
+form#startform ul li span {
+	width: 17em;
+	margin:0px;
+	display:block;
+	float:left;
+/* floatでなく、CSS3 の「display: inline-block」を使う手もアリ 
+	display: inline-block;*/
+}
+
+/*「:after」で <li>の末尾でフロートをクリア*/
+form#startform ul li:after {
+	content:".";
+	display:block;
+	height:0;
+	visibility:hidden;
+	clear:both;     /*←フロートをクリア*/
+}
+
+/* テキスト入力部品の見た目を統一する */
+form#startform ul li label .txtfiled, form#startform select {
+	width:250px;
+	padding:3px 5px;
+	margin:0px;
+	color:#666;
+	border: solid 1px #ccc;
+	/*テキストエリア内にシャドウをつける。最初にbackground初期化が必要*/
+    background: #fff;
+	-webkit-box-shadow: 2px 3px 5px -2px #ddd inset;
+	-moz-box-shadow: 2px 3px 5px -2px #ddd inset;
+	box-shadow: 2px 3px 5px -2px #ddd inset;
+	/*角丸にする*/
+	border-radius:6px;
+	-webkit-border-radius:6px;
+	-moz-border-radius:6px;
+}
+form#startform select {
+	/*selectは250では大きすぎるので*/
+	width:100px;
+}
+
+/*チェックボックス、ラジオボタンのブロックの指定*/
+form#startform ul li p {
+	margin:5px 0 0 40px;
+}
+/*チェックボックス、ラジオボタンの label要素を横に並べる*/
+form#startform ul li p label {
+	margin-right: 2em;
+	display: block;
+	float: left;
+}
+/*input要素とテキストがくっつかないように右にマージンを少し*/
+form#startform ul li p label input {
+	margin-right:0.5em;
+}
+/*チェックボックス、ラジオボタンの label要素にロールオーバー時の変化を指定する*/
+form#startform ul li p label:hover {
+	background : #FFF;
+	color: #096;
+	font-weight:bold;
+}
+/*チェックボックスの<label>の横幅を統一する（<p>にクラス名.checkをつけて）*/
+form#startform ul li p.check label {
+	width: 9em;
+}
+/*送信・リセットボタンの体裁を指定（[type="○○"]で属性の値でセレクト）*/
+form#startform ul li input[type="submit"] ,
+form#startform ul li input[type="reset"] {
+	cursor:pointer;     /*←カーソルを指先型に変化させる*/
+	font-size:130%;
+	font-weight: bold;
+	width:150px;
+	padding: 5px 0;
+	margin-right:0.5em;
+	border-style:none;
+	color: #fff;
+	background:#90E733;
+/*↓背景グラデーションの指定です*/
+	background: -moz-linear-gradient(top, #90E733, #428000 50%, #90E733);
+	background: -webkit-linear-gradient(top, #90E733, #428000 50%, #90E733);
+	background: linear-gradient(#90E733, #428000 50%, #90E733);
+/*↓以下、ボックスの角丸、シャドウ、テキストシャドウの指定*/
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-moz-box-shadow: 2px 2px 3px 1px #666;
+	-webkit-box-shadow: 2px 2px 3px 1px #666;
+	box-shadow: 2px 2px 3px 1px #666;
+	text-shadow: 1px 1px 2px #000; 
+}
+
+form#startform ul li input[type="submit"]:hover ,
+form#startform ul li input[type="reset"]:hover {
+/*↓ここではロールオーバー時の透明度を変更。もちろんグラデーションを指定してもOK*/
+	opacity: 0.8;
+	font-size:135%;
+}
