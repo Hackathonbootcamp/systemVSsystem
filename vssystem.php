@@ -24,7 +24,7 @@ foreach($aryBot as $val) {
 <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
 </head>
 <body nowrap="" bgcolor="#ffffff" text="#333333">
-  <form id="startform" action="exec.php">
+  <form id="startform" action="exec.php" method="post">
   <ul>
   <li>
   <label>
