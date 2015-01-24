@@ -3,8 +3,8 @@ $startWord = $_POST['start_word'];
 $endWord   = $_POST['end_word'];
 
 
-$botId1 = 1;
-$botId2 = 2;
+$botId1 = $_POST['bot_id1'];
+$botId2 = $_POST['bot_id2'];
 
 // ゲームスタート
 $startUrl = "http://vachat4relay.herokuapp.com/start?bot_id1=".$botId1."&bot_id2=".$botId2."&start=".$startWord."&goal=".$endWord;
@@ -16,15 +16,12 @@ if (is_array($aryResult)) {
   $gameId = $aryResult['game_id'];
   $run    = $aryResult['run?'];
 }
-//echo "game:".$game."<br />";
-//echo "run:".$run."<br />";
 
 if ($run) {
   $retunUrl = "game.php?game_id=".$gameId;
 } else {
   $retunUrl = "game_error.php";
 }
-//echo $retunUrl;
 header("Location: $retunUrl");
   
 ?>
