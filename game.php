@@ -1,3 +1,6 @@
+<?php
+$gameId = $_GET['game_id'];
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,15 +16,32 @@
 function tm(){
   tm = setInterval("location.reload()",10000);
 }
+
+function execStop(){
+  $.ajax({
+    type: "GET",
+    url: "http://vachat4relay.herokuapp.com/stop",
+    game_id: "<?=$gameid?>",
+    success: function(data){
+        alert("停止しました。");
+        return false;
+    }
+});
+}
+
 // -->
 </script>
 </head>
 <body body onLoad="tm()" nowrap="" bgcolor="#ffffff" text="#333333">
 <form method="post" action="">
-<div id="search">
-<input type="text" name="kainyu" value="search..." onclick="value=''"><input type="submit" value="click!" id="submit">
+<div>
+<input type="text" name="ins_word" class="txtfiled" size="20">
+<input type="button" value="　介入　" onclick="execStop();">
 </div>
 </form>
+<div>
+<img src="img/stop.png" border=1 alt="停止">
+</div>
 
 <?php
 
@@ -29,8 +49,6 @@ $host = "ec2-174-129-1-179.compute-1.amazonaws.com";
 $dbname = "d76k2v0lvos1l3";
 $user = "ollzkkdgygzkti";
 $pass = "3fdgK_t5FBW2n4-yGs5_D6Xh8f";
-
-$gameId = $_GET['game_id'];
 
 $dba = pg_connect("host=$host dbname=$dbname user=$user password=$pass");
 
