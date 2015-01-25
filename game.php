@@ -14,10 +14,10 @@ $botId2 =  $_GET['bot_id2'];
 
 <script type="text/javascript">
 <!--
-var stopFlg = false;
+var stopFlg;
 //タイマーをセット
 function tm(){
-  if (stopFlg != false) {
+  if (!stopFlg) {
     tm = setInterval("location.reload()",10000);
   }
 }
