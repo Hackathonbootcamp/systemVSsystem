@@ -46,7 +46,7 @@ function execStop(){
 </div>
 </form>
 <div>
-<img src="img/stop.png" border=1 alt="停止" onclick="execStop();">
+<img src="http://www.material-land.com/material/1172.png" border=0 alt="停止" width="30" height="30" onclick="execStop();">
 </div>
 
 <?php
