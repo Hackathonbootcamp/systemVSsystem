@@ -1,5 +1,7 @@
 <?php
 $gameId = $_GET['game_id'];
+$botId1 =  $_GET['bot_id1'];
+$botId2 =  $_GET['bot_id2'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -72,7 +74,14 @@ foreach($aryBot as $val) {
 $sql = "select bot_id, word, picture_url from chat_log where game_id = '" . $gameId . "' order by ins_time desc";
 $rs = pg_query($dba, $sql);
 while ($row = pg_fetch_array($rs)) {
-  $aryBot = $aryBotList[$row['bot_id']];
+  $botId = $row['bot_id'];
+  $aryBot = $aryBotList[$botId];
+  if ($botId1 == $botId) {
+    $className = "bot1";
+  } else {
+    $className = "bot2";
+  }
+  
   $className = "bot".$row['bot_id'];
   $word = $row['word'];
   $imgUrl = $aryBot['picture_url'];
