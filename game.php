@@ -75,14 +75,13 @@ $sql = "select bot_id, word, picture_url from chat_log where game_id = '" . $gam
 $rs = pg_query($dba, $sql);
 while ($row = pg_fetch_array($rs)) {
   $botId = $row['bot_id'];
-  $aryBot = $aryBotList[$botId];
+  $aryBot = $aryBotList[$row['bot_id']];
   if ($botId1 == $botId) {
     $className = "bot1";
   } else {
     $className = "bot2";
   }
-  
-  $className = "bot".$row['bot_id'];
+
   $word = $row['word'];
   $imgUrl = $aryBot['picture_url'];
   $botName = $aryBot['bot_name'];
