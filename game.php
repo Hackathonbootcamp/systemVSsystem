@@ -23,10 +23,11 @@ function tm(){
 }
 
 function execStop(){
+	alert('stop start');
   $.ajax({
-    type: "GET",
-    url: "http://vachat4relay.herokuapp.com/stop",
-    game_id: "<?=$gameid?>",
+    type: 'get',
+    url: 'http://vachat4relay.herokuapp.com/stop',
+    game_id: '<?=$gameid?>',
     success: function(data){
     	stopFlg = true;
         alert("停止しました。");
