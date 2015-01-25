@@ -9,7 +9,7 @@ $botId2 =  $_GET['bot_id2'];
   <meta charset="utf-8">
 <title>SAMPLE</title>
 
-<script type="text/javascript" src="js/jquery.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
 
 <script type="text/javascript">
