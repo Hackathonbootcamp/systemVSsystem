@@ -14,9 +14,12 @@ $botId2 =  $_GET['bot_id2'];
 
 <script type="text/javascript">
 <!--
+var stopFlg = false;
 //タイマーをセット
 function tm(){
-  tm = setInterval("location.reload()",10000);
+  if (stopFlg != false) {
+    tm = setInterval("location.reload()",10000);
+  }
 }
 
 function execStop(){
@@ -25,6 +28,7 @@ function execStop(){
     url: "http://vachat4relay.herokuapp.com/stop",
     game_id: "<?=$gameid?>",
     success: function(data){
+    	stopFlg = true;
         alert("停止しました。");
         return false;
     }
@@ -42,7 +46,7 @@ function execStop(){
 </div>
 </form>
 <div>
-<img src="img/stop.png" border=1 alt="停止">
+<img src="img/stop.png" border=1 alt="停止" onclick="execStop();">
 </div>
 
 <?php
