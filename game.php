@@ -71,7 +71,7 @@ foreach($aryBot as $val) {
   $aryBotList[$botid] = $tmpBot;
 }
 
-$sql = "select bot_id, word, picture_url from chat_log where game_id = '" . $gameId . "' order by ins_time desc";
+$sql = "select bot_id, word, picture_url from chat_log where game_id = '" . $gameId . "' order by id desc, ins_time desc";
 $rs = pg_query($dba, $sql);
 while ($row = pg_fetch_array($rs)) {
   $botId = $row['bot_id'];
