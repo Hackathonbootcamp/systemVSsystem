@@ -25,14 +25,21 @@ function tm(){
 function execStop(){
 	alert('stop start');
   $.ajax({
-    type: 'POST',
-    url: 'http://vachat4relay.herokuapp.com/stop?game_id=<?=$gameId?>',
+    type: 'GET',
+    url: 'http://vachat4relay.herokuapp.com/stop',
+    data {
+    	game_id:"<?=$gameId?>"
+    },
     success: function(data){
     	stopFlg = true;
         alert("停止しました。");
         return false;
+    },
+    error:function(data){
+      alert('error!');
     }
 });
+alert('end!');
 }
 
 // -->
