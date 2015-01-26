@@ -27,7 +27,7 @@ function execStop(){
   $.ajax({
     type: 'GET',
     url: 'http://vachat4relay.herokuapp.com/stop',
-    data {
+    data:{
     	game_id:"<?=$gameId?>"
     },
     success: function(data){
