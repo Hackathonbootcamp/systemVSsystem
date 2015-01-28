@@ -25,31 +25,27 @@ function tm(){
 function execStop(){
 	alert('stop start');
   $.ajax({
-    type: 'GET',
-    url: 'http://vachat4relay.herokuapp.com/stop',
-    data:{
-    	game_id:"<?=$gameId?>"
-    },
+    type: 'POST',
+    url: 'http://vachat4relay.herokuapp.com/stop?game_id=<?=$gameId?>',
     success: function(data){
     	stopFlg = true;
         alert("停止しました。");
         return false;
-    },
-    error:function(data){
-      alert('error!');
     }
 });
-alert('end!');
 }
 
 // -->
 </script>
 </head>
 <body body onLoad="tm()" nowrap="" bgcolor="#ffffff" text="#333333">
-<form method="post" action="">
+<form method="post" action="exec_kainyu.php">
 <div>
-<input type="text" name="ins_word" class="txtfiled" size="20">
-<input type="button" value="　介入　" onclick="execStop();">
+<input type="text" name="word" class="txtfiled" size="20">
+<input type="submit" value="　介入　">
+<input type="hidden" name="game_id" value="<?=$gameId?>">
+<input type="hidden" name="bot_id1" value="<?=$botId1?>">
+<input type="hidden" name="bot_id2" value="<?=$botId2?>">
 </div>
 </form>
 <div>
