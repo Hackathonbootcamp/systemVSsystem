@@ -5,7 +5,7 @@ $botId2 = $_POST['bot_id2'];
 $gameId = $_POST['game_id'];
 
 // ゲームスタート
-$startUrl = "http://vachat4relay.herokuapp.com/chat?game_id=".$gameId."&word=".$word
+$startUrl = "http://vachat4relay.herokuapp.com/chat?game_id=".$gameId."&word=".$word;
 $jsonString = file_get_contents($startUrl);
 $aryResult = json_decode($jsonString, true);
 var_dump($aryResult);
