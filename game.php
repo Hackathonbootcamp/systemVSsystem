@@ -2,6 +2,7 @@
 $gameId = $_GET['game_id'];
 $botId1 =  $_GET['bot_id1'];
 $botId2 =  $_GET['bot_id2'];
+$mode = $_GET['mode'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -83,12 +84,15 @@ $rs = pg_query($dba, $sql);
 while ($row = pg_fetch_array($rs)) {
   $botId = $row['bot_id'];
   $aryBot = $aryBotList[$row['bot_id']];
-  if ($botId1 == $botId) {
+  if ($mode == 2) {
     $className = "bot1";
   } else {
-    $className = "bot2";
+    if ($botId1 == $botId) {
+      $className = "bot1";
+    } else {
+      $className = "bot2";
+    }
   }
-
   $word = $row['word'];
   $imgUrl = $aryBot['picture_url'];
   $botName = $aryBot['bot_name'];
