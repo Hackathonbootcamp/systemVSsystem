@@ -18,10 +18,20 @@ foreach($aryBot as $val) {
 <html>
 <head>
   <meta charset="utf-8">
-<title>SAMPLE</title>
+<title>システム雑談</title>
 
-<script type="text/javascript" src="js/jquery.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
+<script type="text/javascript">
+<!--
+  function execKaiwa(mode) {
+    $("#mode").val(mode);
+	document.startForm.submit();
+  }
+// -->
+</script>
+
+
 </head>
 <body nowrap="" bgcolor="#ffffff" text="#333333">
   <form id="startform" action="exec.php" method="post">
@@ -73,9 +83,11 @@ foreach($aryBot as $val) {
   <div style="clear:both"></div>
   </li>
   <li>
-  <input type="submit" value="　かいし　">
+  <input type="button"  onclick="execKaiwa(1);" value="　対話会話　">
+  <input type="button"  onclick="execKaiwa(2);" value="　マルチ会話　">
 </li>
 </ul>
+<input type="hidden" name="mode" id="mode" value="">
   </form>
 </body>
 </html>
