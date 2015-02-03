@@ -243,6 +243,7 @@ form#startform ul li p.check label {
 }
 /*送信・リセットボタンの体裁を指定（[type="○○"]で属性の値でセレクト）*/
 form#startform ul li input[type="submit"] ,
+form#startform ul li input[type="button"] ,
 form#startform ul li input[type="reset"] {
 	cursor:pointer;     /*←カーソルを指先型に変化させる*/
 	font-size:130%;
