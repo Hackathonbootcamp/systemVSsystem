@@ -34,7 +34,7 @@ foreach($aryBot as $val) {
 
 </head>
 <body nowrap="" bgcolor="#ffffff" text="#333333">
-  <form id="startform" action="exec.php" method="post">
+  <form name="startForm" id="startform" action="exec.php" method="post">
   <ul>
   <li>
   <label>
