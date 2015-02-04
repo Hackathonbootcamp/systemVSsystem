@@ -27,7 +27,9 @@ function execStop(){
 	alert('stop start');
   $.ajax({
     type: 'POST',
-    url: 'http://vachat4relay.herokuapp.com/stop?game_id=<?=$gameId?>',
+	data:{game_id, '<?=$gameId>'
+	},
+    url: 'http://http://systemvssystem.herokuapp.com/stop.php',
     success: function(data){
     	stopFlg = true;
         alert("停止しました。");
