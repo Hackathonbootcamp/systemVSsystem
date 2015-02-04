@@ -28,7 +28,7 @@ function execStop(){
   $.ajax({
     type: 'POST',
 	data:{game_id: '<?=$gameId?>'},
-    url: 'http://http://systemvssystem.herokuapp.com/stop.php',
+    url: 'stop.php',
     success: function(data){
     	stopFlg = true;
         alert("停止しました。");
