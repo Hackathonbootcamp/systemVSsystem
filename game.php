@@ -22,7 +22,7 @@ var tm;
 function tm(){
   if (!stopFlg) {
     //tm = setTimeOut("location.reload()",10000);
-	tm = setTimeout('location.reload()',10000);
+	tm = setTimeout('location.reload()',5000);
   }
 }
 
@@ -33,7 +33,7 @@ function execStop(){
     url: 'http://systemvssystem.herokuapp.com/stop.php',
     success: function(data){
     	stopFlg = true;
-		clearTimeout(tm;);
+		clearTimeout(tm);
         alert("停止しました。");
         return true;
     },
