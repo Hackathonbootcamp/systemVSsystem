@@ -33,7 +33,10 @@ function execStop(){
     	stopFlg = true;
         alert("停止しました。");
         return false;
-    }
+    },
+	error: function(data){
+	  alert(data);
+	}
 });
 }
 
