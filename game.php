@@ -16,23 +16,26 @@ $mode = $_GET['mode'];
 <script type="text/javascript">
 <!--
 var stopFlg;
+var tm;
+
 //タイマーをセット
 function tm(){
   if (!stopFlg) {
-    tm = setInterval("location.reload()",10000);
+    //tm = setTimeOut("location.reload()",10000);
+	tm = setTimeout('location.reload()',10000);
   }
 }
 
 function execStop(){
-	alert('stop start');
   $.ajax({
     type: 'POST',
 	data:{game_id: '<?=$gameId?>'},
-    url: 'stop.php',
+    url: 'http://systemvssystem.herokuapp.com/stop.php',
     success: function(data){
     	stopFlg = true;
+		clearTimeout(tm;);
         alert("停止しました。");
-        return false;
+        return true;
     },
 	error: function(data){
 	  alert(data);
