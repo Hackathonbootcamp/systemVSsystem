@@ -10,7 +10,7 @@ $mode = $_GET['mode'];
   <meta charset="utf-8">
 <title>SAMPLE</title>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
 
 <script type="text/javascript">
