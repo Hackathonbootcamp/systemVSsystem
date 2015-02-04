@@ -15,11 +15,6 @@ if (is_array($aryResult)) {
   $run = $aryResult['run?'];
 }
 
-if ($run) {
-  $retunUrl = "game.php?game_id=".$gameId."&bot_id1=".$botId1."&bot_id2=".$botId2;
-} else {
-  $retunUrl = "game_error.php";
-}
+$retunUrl = "game.php?game_id=".$gameId."&bot_id1=".$botId1."&bot_id2=".$botId2;
 header("Location: $retunUrl");
-  
 ?>
